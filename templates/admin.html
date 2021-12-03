@@ -1,0 +1,72 @@
+<html>
+<style>
+body{
+    padding: 10px;
+    background-color: #bee1e6;
+
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: #bee1e6;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #9ad9db;
+}
+
+
+input[type=button] {
+    float: center;
+    width: 30%;
+    text-align: center;
+    background-color: #48cae4;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background-color: #00b4d8;
+}
+
+h3,h2{
+font-family: "Lucida Handwriting",Cursive;
+text-align:right;
+}
+</style>
+<body>
+<h3>Welcome Admin</h3>
+<ul>
+  <li><a href="/logout">Log out</a></li>
+  <li><a class="active" href="/">Home</a></li>
+
+</ul>
+<form>
+
+<input type="button" value="Add new bus" onclick="window.location.href='/bus.html'" />
+<input type="button" value="Show all buses" onclick="window.location.href='/list.html'" />
+<input type="button" value="Show all bookings" onclick="window.location.href='/bookinglist.html'" />
+<input type="button" value="Show all cancelings" onclick="window.location.href='/cancellist.html'" />
+<input type="button" value="Delete bus" onclick="window.location.href='/delete.html'" />
+<input type="button" value="Find bus" onclick="window.location.href='/find.html'" />
+
+</form>
+</body>
+</html>

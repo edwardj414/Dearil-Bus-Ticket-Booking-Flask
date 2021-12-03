@@ -1,0 +1,56 @@
+<html>
+<style>
+body{
+margin: auto;
+width: 50%;
+background-color: #bee1e6;
+    padding: 10px;
+
+}
+input[type=text] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+h3{
+font-family: "Lucida Handwriting",Cursive;
+text-align:right;
+}
+
+input[type=submit] {
+    width: 11%;
+    font-family: "Lucida Console",Monospace;
+    text-align: center;
+    background-color: #48cae4;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+</style>
+<body>
+
+      <form action = "{{ url_for('delrec') }}" method = "POST">
+         <h3>BUS RECORD DELETION</h3>
+<br>
+<div>
+         ENTER ID TO DELETE<br>
+         <input type = "number" name = "id" autocomplete="off" /></br>
+<input type = "submit" value = "submit" /><br>
+    </div>
+      </form>
+
+   </body>
+</html>

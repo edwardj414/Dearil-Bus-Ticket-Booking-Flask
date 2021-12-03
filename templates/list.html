@@ -1,0 +1,115 @@
+<html>
+<style>
+
+body{
+margin: auto;
+background-color: #bee1e6;
+    padding: 10px;
+
+}
+input {
+    width: 15%;
+    font-family: "Lucida Console",Monospace;
+    text-align: center;
+    padding: 5px 8px;
+    margin: 2px 0;
+    display: inline-block;
+    border: 1px solid #fad2e1;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+h3{
+font-family: "Lucida Handwriting",Cursive;
+text-align: right;
+}
+
+input[type=submit] {
+    width: 11%;
+    font-family: "Lucida Console",Monospace;
+    text-align: center;
+    background-color: #48cae4;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #00b4d8;
+}
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+<body>
+<form method="POST" action="{{ url_for('booking') }}"
+   <h3>{{msg}}</h3>
+
+      <table border = 1 id="customers">
+         <thead>
+            <td>ID</td>
+            <td>BUS_NAME</td>
+            <td>SOURCE</td>
+            <td>DESTINATION</td>
+            <td>TIME</td>
+            <td>PRICE</td>
+<td>NUM OF SEATS</td>
+<td>NUM OF SEATS REM</td>
+
+         </thead>
+
+         {% for row in rows %}
+            <tr>
+               <td>{{row[0]}}</td>
+               <td>{{row[1]}}</td>
+               <td> {{ row[2]}}</td>
+               <td>{{row[3]}}</td>
+	<td>{{row[4]}}</td>
+	<td>{{row[5]}}</td>
+<td>{{row[6]}}</td>
+<td>{{row[7]}}</td>
+
+
+            </tr>
+         {% endfor %}
+      </table>
+{% if user!='admin'   %}
+enter id to book: <br>
+<input type="number" name="id" autocomplete="off">
+<br>
+enter number of passengers <br>
+<input type="number" name="nop" autocomplete="off">
+<br>
+<input type="submit" value="book">
+{% endif %}
+{% if user!='admin'   %}
+      <a href="/user">Go back to home page</a>
+{% else %}
+<a href="/user">Go back to home page</a>
+{% endif %}
+
+     </form>
+   </body>
+</html>

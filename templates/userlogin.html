@@ -1,0 +1,96 @@
+<html>
+<style>
+    body{
+    font-family: "Lucida Console",Monospace;
+    background-color: #bee1e6;
+    padding: 10px;
+    }
+    ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #83c5be;
+    border-radius: 10px;
+    }
+    li {
+    float: right;
+    }
+    li a {
+    display: block;
+    color: #005f73;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+input[type=text] {
+    width: 15%;
+    font-family: "Lucida Console",Monospace;
+    text-align: center;
+    padding: 5px 8px;
+    margin: 2px 0;
+    display: inline-block;
+    border: 1px solid #fad2e1;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+input[type=password] {
+    width: 15%;
+    font-family: "Lucida Console",Monospace;
+    text-align: center;
+    padding: 5px 8px;
+    margin: 2px 0;
+    display: inline-block;
+    border: 1px solid #fad2e1;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 6%;
+    font-family: "Lucida Console",Monospace;
+    text-align: center;
+    background-color: #48cae4;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #00b4d8;
+}
+
+li a:hover {
+    background-color: #9ad9db;
+}
+h3{
+font-family: "Lucida Handwriting",Cursive;
+text-align: right;
+ color: #005f73;
+}
+
+</style>
+<body>
+<div>
+    <h3>Dearil Bus Booking</h3>
+<ul>
+ <li><a href="/user.html">Sign up</a></li>
+  <li><a class="active" href="/">Home</a></li>
+</ul>
+    </div>
+<form action = "{{ url_for('login') }}" method = "post">
+<br>
+Enter username: <br>
+      <p><input type = text name = "username" autocomplete="off" /></p></br>
+Enter password: <br>
+      <p><input type = password name = "password" /></p></br>
+
+      <p><input type = submit value = "Login" /></p>
+
+   </form>
+
+</body>
+</html>

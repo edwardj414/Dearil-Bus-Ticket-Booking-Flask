@@ -1,0 +1,75 @@
+<html>
+<style>
+body{
+    padding: 10px;
+    font-family: "Lucida Console",Monospace;
+    background-color: #bee1e6;
+
+}
+input[type=text] {
+    width: 30%;
+    padding: 5px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+h3{
+font-family: "Lucida Handwriting",Cursive;
+text-align:right;
+}
+
+input[type=submit] {
+    width: 6%;
+    font-family: "Lucida Console",Monospace;
+    text-align: center;
+    background-color: #48cae4;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #00b4d8;
+}
+
+div {
+
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+<body>
+      <link rel="stylesheet" type="text/css" href="forms.css" />
+      <form action = "{{ url_for('addrec') }}" method = "POST">
+         <h3>BUS INFORMATION</h3>
+<br>
+
+         Name<br>
+         <input type = "text" name = "nm" autocomplete="off" /></br>
+
+         Source<br>
+         <input type="text" name = "src" autocomplete="off" /><br>
+
+         Destination<br>
+         <input type = "text" name = "dest" autocomplete="off" /><br>
+
+         Time<br>
+         <input type = "text" name = "t" autocomplete="off" /><br>
+
+         Price<br>
+         <input type = "number" name = "p" autocomplete="off"/><br>
+
+         Number of seats<br>
+         <input type = "number" name = "nos" autocomplete="off" /><br>
+
+         <input type = "submit" value = "submit" /><br>
+      </form>
+   </body>
+</html>

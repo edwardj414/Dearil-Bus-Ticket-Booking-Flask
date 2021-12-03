@@ -1,0 +1,140 @@
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<style>
+body{
+margin: auto;
+font-family: "Lucida Console",Monospace;
+    background-color: #bee1e6;
+    width: 50%;
+    padding: 10px;
+
+}
+input[type=text] {
+    width: 40%;
+    font-family: "Lucida Console",Monospace;
+    text-align: center;
+    padding: 5px 8px;
+    margin: 2px 0;
+    display: inline-block;
+    border: 1px solid #fad2e1;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+input[type=password] {
+    width: 40%;
+    font-family: "Lucida Console",Monospace;
+    text-align: center;
+    padding: 5px 8px;
+    margin: 2px 0;
+    display: inline-block;
+    border: 1px solid #fad2e1;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+input[type=email] {
+    width: 40%;
+    font-family: "Lucida Console",Monospace;
+    text-align: center;
+    padding: 5px 8px;
+    margin: 2px 0;
+    display: inline-block;
+    border: 1px solid #fad2e1;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+input[type=number] {
+    width: 40%;
+    font-family: "Lucida Console",Monospace;
+    text-align: center;
+    padding: 5px 8px;
+    margin: 2px 0;
+    display: inline-block;
+    border: 1px solid #fad2e1;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+input[type=date] {
+    width: 40%;
+    font-family: "Lucida Console",Monospace;
+    text-align: center;
+    padding: 5px 8px;
+    margin: 2px 0;
+    display: inline-block;
+    border: 1px solid #fad2e1;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+h3{
+font-family: "Lucida Handwriting",Cursive;
+text-align:right;
+}
+
+input[type=submit] {
+   width: 11%;
+    font-family: "Lucida Console",Monospace;
+    text-align: center;
+    background-color: #48cae4;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=reset] {
+   width: 11%;
+    font-family: "Lucida Console",Monospace;
+    text-align: center;
+    background-color: #48cae4;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+
+    input[type=button] {
+   width: 11%;
+    font-family: "Lucida Console",Monospace;
+    text-align: center;
+    background-color: #48cae4;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #00b4d8;
+}
+</style>
+<body>
+
+      <form action = "{{ url_for('adduser') }}" method = "POST">
+         <h3>User Information</h3>
+<br>
+
+         Name<br>
+         <input type = "text" name = "nm" autocomplete="off"/></br>
+
+         Password<br>
+         <input type="password" name = "pass" /><br>
+
+          Phone Number<br>
+          <input type="number" name="phone" autocomplete="off"/></br>
+
+          Email-ID<br>
+          <input type="email" name="email" autocomplete="off"/></br>
+          DOB<br>
+          <input type="date" name="DOB" autocomplete="off"/></br>
+
+
+         <input type = "submit" value = "Submit" />
+          <input type = "reset" value = "Reset" />
+      </form>
+
+   </body>
+</html>

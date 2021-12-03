@@ -1,0 +1,75 @@
+<html>
+<style>
+body{
+margin: auto;
+    background-color: #bee1e6;
+    padding: 10px;
+
+}
+
+h3,h2{
+font-family: "Lucida Handwriting",Cursive;
+text-align:right;
+}
+input[type=button] {
+    float: center;
+    width: 30%;
+    text-align: center;
+    background-color: #48cae4;
+    color: white;
+    padding: 14px 20px;
+    margin: 10px 30%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background-color: #00b4d8;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #83c5be;
+    border-radius: 10px;
+    }
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #005f73;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #9ad9db;
+}
+
+
+</style>
+<body>
+<ul>
+  <li><a href="/logout">Log out</a></li>
+  <li><a class="active" href="/">Home</a></li>
+
+</ul>
+<h2> Logged in as  {{user}}  </h2>
+<br>
+
+<form>
+
+<input type="button" value="Book" onclick="window.location.href='/book.html'" /><br>
+<input type="button" value="Cancel" onclick="window.location.href='/cancel.html'" /><br>
+<input type="button" value="View all bookings" onclick="window.location.href='/userbookinglist.html'" /><br>
+
+</form>
+   </body>
+</html>

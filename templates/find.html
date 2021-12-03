@@ -1,0 +1,68 @@
+<html>
+<style>
+body{
+margin: auto;
+    width: 50%;
+    background-color: #bee1e6;
+    padding: 10px;
+
+}
+input[type=text] {
+    width: 30%;
+    padding: 5px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+input[type=date] {
+    width: 30%;
+    padding: 5px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+h3{
+font-family: "Lucida Handwriting",Cursive;
+text-align:right;
+}
+
+input[type=submit] {
+     width: 11%;
+    font-family: "Lucida Console",Monospace;
+    text-align: center;
+    background-color: #48cae4;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #00b4d8;
+}
+
+</style>
+ <body>
+
+      <form action = "{{ url_for('findbus') }}" method = "POST">
+         <h3>BOOKING FORM</h3>
+<br>
+
+          Source<br>
+         <input type="text" name = "src" autocomplete="off"/><br>
+         Destination<br>
+         <input type = "text" name = "dest" autocomplete="off"/><br>
+          Date<br>
+          <input type="date" name = "date" autocomplete="off"/><br>
+         <input type = "submit" value = "submit" /><br>
+      </form>
+
+   </body>
+</html>
